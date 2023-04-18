@@ -10,9 +10,9 @@ function solution(maps) {
         visited[a][b] = 1;
         while (q.length) {
             const [r, c] = q.shift();
-            for (const move of moves) {
-                const nr = r + move[0];
-                const nc = c + move[1];
+            for (const [dr, dc] of moves) {
+                const nr = r + dr;
+                const nc = c + dc;
                 if (nr < 0 || nr >= HEIGHT || nc < 0 || nc >= WIDTH || maps[nr][nc] === 0 || 
                     visited[nr][nc] !== 0) continue;
                 visited[nr][nc] = visited[r][c] + 1;
@@ -21,6 +21,7 @@ function solution(maps) {
         }
     }
     BFS(0,0);
+    //console.log(maps, visited)
     const answer = visited[HEIGHT-1][WIDTH-1];
     return answer === 0 ? -1 : answer;
 }
