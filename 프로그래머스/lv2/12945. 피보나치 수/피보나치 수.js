@@ -8,5 +8,6 @@ function solution(n) {
             answer.push(temp%1234567);
         }
     }
+    
     return answer[n];
 }
