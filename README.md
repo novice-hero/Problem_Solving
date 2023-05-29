@@ -9,11 +9,11 @@
   | :------: | :------------: |
   |  Bronze  |       0        |
   |  Silver  |       2        |
-  |   Gold   |       1          |
+  |   Gold   |       2          |
   | Platinum |       0      |
   | Diamond  |       0       |
   |   Ruby   |       0          |
-  |  Total   |       3         |
+  |  Total   |       4         |
   \n
   ### 프로그래머스
   ---
