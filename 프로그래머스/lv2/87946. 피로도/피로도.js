@@ -1,31 +1,19 @@
-const Permutation = (arr, num) => {
-    const result = [];
-    if (num === 1) return arr.map(v=>[v]);
-    
-    arr.forEach((select, i, origin)=>{
-        const remainder = [...origin.slice(0,i),...origin.slice(i+1)];
-        const permutation = Permutation(remainder, num-1);
-        const combine = permutation.map(v=>[select, ...v]);
-        result.push(...combine);
-    });
-    
-    return result;
-}
-
 const solution = (k, dungeons) => {
     let answer = 0;
-    const permutation = Permutation(dungeons,dungeons.length);
-    permutation.forEach(dungeon => {
-        let copy_k = k;
-        let cnt = 0;
-        dungeon.forEach((x, i) => {
-            if (copy_k >= x[0]) {
-                copy_k -= x[1];
-                cnt++;
-            }
-        })
-        answer = Math.max(answer, cnt);
-    })
+    let copy_k = k;
+    const visited = Array.from({length: dungeons.length}, () => 0);
+    
+    const dfs = (stamina, count) => {
+        for (let i=0; i<dungeons.length; i++) {
+            if (!visited[i] && stamina >= dungeons[i][0]) {
+                visited[i] = 1;
+                dfs(stamina-dungeons[i][1], count+1);
+                visited[i] = 0;
+            } 
+        }
+        answer = Math.max(answer, count);
+    }
+    dfs(copy_k, 0);
     
     return answer;
 }
