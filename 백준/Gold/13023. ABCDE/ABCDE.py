@@ -9,7 +9,7 @@ for i in range(M):
 
 def dfs(depth, idx):
   global check
-  if depth == 5:
+  if depth == 4:
     check = True
     return
 
@@ -20,11 +20,11 @@ def dfs(depth, idx):
       visited[cur] = 0
 
 for i in range(N):
+  visited[i] = 1
   dfs(0, i)
-  visited[i] = 0
-
   if check:
     break
+  visited[i] = 0
 
 if check:
   print(1)
