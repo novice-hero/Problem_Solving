@@ -22,9 +22,9 @@
   |   lv0    |       0        |
   |   lv1    |       13        |
   |   lv2    |       14        |
-  |   lv3    |       1        |
+  |   lv3    |       2        |
   |   lv4    |       0        |
   |   lv5    |       0        |
   |  unrated |       6    |
-  |  Total   |       34           |
+  |  Total   |       35           |
   
