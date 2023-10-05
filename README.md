@@ -8,12 +8,12 @@
   |   단계   | 해결한 문제 수 |
   | :------: | :------------: |
   |  Bronze  |       0        |
-  |  Silver  |       4        |
+  |  Silver  |       5        |
   |   Gold   |       6          |
   | Platinum |       0      |
   | Diamond  |       0       |
   |   Ruby   |       0          |
-  |  Total   |       10         |
+  |  Total   |       11         |
   \n
   ### 프로그래머스
   ---
